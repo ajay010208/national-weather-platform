@@ -1,0 +1,19 @@
+import { Routes, Route } from 'react-router-dom'
+import Layout from './components/Layout'
+import Dashboard from './pages/Dashboard'
+import ChatPage from './pages/ChatPage'
+import AboutPage from './pages/AboutPage'
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Dashboard />} />
+        <Route path="chat" element={<ChatPage />} />
+        <Route path="about" element={<AboutPage />} />
+      </Route>
+    </Routes>
+  )
+}
+
+export default App
